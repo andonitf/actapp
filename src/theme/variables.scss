@@ -1,0 +1,81 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+@import "ionic.globals";
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+/* LSMko koloreak */
+$background-color-lsm:            snow;  //gainsboro;
+$toolbar-background-color-lsm:    #1d1e1e;  //#504f4f
+$toolbar-border-bottom-color-lsm: #33654e;  //#185037;
+$toolbar-title-color-lsm:         white;
+
+$list-border-color-dark-lsm:      #003e22;
+$list-border-color-light-lsm:     #adf5a9;
+
+
+/* LSMko koloreak */
+$background-color-let:            snow;
+$toolbar-background-color-let:    #248fb4;
+$toolbar-border-bottom-color-let: #e68f00;
+$toolbar-title-color-let:         white;
+
+$list-border-color-dark-let:      #1b4372;
+$list-border-color-light-let:     #8dc1ed;
+
+
+/*$text-color:        #000;
+$background-color:  #fff;*/
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #387ef5,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  favorite:   #69BB7B
+);
+
+$home-category-color: #FFFFFF;
+$grayColor:           #f6f6f6;    /* Gris argia */
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+@import "app.LSM";
+@import "app.LET";
+
+@font-face {
+	font-family: 'Aldrich';
+  font-style: normal;
+  font-weight: 400;
+	src: local("Aldrich"), url("../assets/fonts/Aldrich-Regular.ttf") format("truetype"); 
+}
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+$ionicons-font-path: "../assets/fonts";
+@import "ionicons";

@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="no-margin" id="titulopantalla">{{ 'Argazkiak' | translate }}</p><p class="no-margin" id="subtitulopantalla">{{ subtitle }}</p></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <argazki-banner></argazki-banner>
+<ion-list>
+  <ion-item>
+    <ion-label stacked>Bandera</ion-label>
+    <ion-select (ionChange)="itemSelected($event)" placeholder="Aukeratu...">
+      <ion-option *ngFor="let item of items" value="{{item.id}}"[innerHTML]="item.iz"></ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+  <ion-grid>
+    <ion-row wrap>
+      <ion-col width-25 *ngFor="let photo of photos; let i = index" (click)="argazkiakIkusi( photo, i )">
+        <img src="{{ url + photo.src1 }}" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

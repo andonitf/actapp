@@ -1,0 +1,17 @@
+<!--<ion-header>
+
+  <ion-navbar>
+  <button ion-button clear icon-left (click)="itxi()">
+    Close
+  </button>
+    <ion-title>argazkia-ikusi</ion-title>
+  </ion-navbar>
+
+</ion-header>-->
+<ion-content>
+  <ion-slides [options]="mySlideOptions">
+    <ion-slide *ngFor='let photo of photos' (click)="itxi()">
+      <img src="{{ url + photo.src2 }}" />
+    </ion-slide>
+  </ion-slides>
+</ion-content>

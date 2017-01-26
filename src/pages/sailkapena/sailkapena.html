@@ -1,0 +1,38 @@
+<ion-header>
+
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="no-margin" id="titulopantalla">{{ 'SailkapenNagusia' | translate }}</p><p class="no-margin" id="subtitulopantalla">{{ subtitle }}</p></ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content>
+	<argazki-banner></argazki-banner>
+	<ion-grid>
+		<ion-row class="grid_header">
+			<ion-col width-10></ion-col>
+			<ion-col width-60>{{ 'Taldea' | translate }}</ion-col>
+			<ion-col width-20>{{ 'Puntuak' | translate }}</ion-col>
+			<ion-col width-10></ion-col>
+		</ion-row>
+		<ion-row *ngFor="let item of items">
+			<ion-col width-10>{{ item.po }}</ion-col>
+			<ion-col width-60 [innerHTML]="item.iz"></ion-col>
+			<ion-col width-20>{{ item.pu }}</ion-col>
+			<ion-col width-10 *ngIf="item.ba > 0">{{ item.ba }} <img src="assets/images/flag_green.png" /></ion-col>
+			<ion-col width-10 *ngIf="item.ba == 0"></ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="{{ 'BeheraEguneratzeko' | translate }}"
+      refreshingSpinner="circles"
+      refreshingText="{{ 'Eguneratzen' | translate }}">
+    </ion-refresher-content>
+	</ion-refresher>
+</ion-content>

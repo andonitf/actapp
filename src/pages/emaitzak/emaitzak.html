@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="no-margin" id="titulopantalla">{{ 'Emaitzak' | translate }}</p><p class="no-margin" id="subtitulopantalla">{{ subtitle }}</p></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <argazki-banner [datuak]="banner_datuak"></argazki-banner>
+  <ion-list>
+    <ion-item class="grid_header">
+      <h2 class="alignleft">{{ 'Taldea' | translate }}</h2>
+      <h4 class="alignright">{{ 'Denbora' | translate }} / {{ 'Alde' | translate }}</h4>
+    </ion-item>    
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <h2 class="alignleft" [innerHTML]="item.po + ' - ' + item.ta"></h2>
+      <h4 class="alignright" [innerHTML]="item.de"></h4>
+      <h4>
+        <span [innerHTML]="item.z1"></span>
+        <span [innerHTML]="item.z2"></span>
+        <span [innerHTML]="item.z3"></span>
+        <span class="alignright" [innerHTML]="item.di"></span>
+      </h4>
+    </button>
+  </ion-list>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="{{ 'BeheraEguneratzeko' | translate }}"
+      refreshingSpinner="circles"
+      refreshingText="{{ 'Eguneratzen' | translate }}">
+    </ion-refresher-content>    
+  </ion-refresher>  
+</ion-content>

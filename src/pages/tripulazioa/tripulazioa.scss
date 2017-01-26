@@ -1,0 +1,175 @@
+page-tripulazioa {
+    ion-icon{
+        margin-right: 10px;
+    }
+    ion-item{
+        padding: 0px !important;
+        min-height: 95px !important;
+        float: left;
+        ion-thumbnail{
+            margin-left: 3px;
+        }
+        .item-left
+        {
+            margin: 8px 16px 8px 5px;
+        }
+    }
+    .item-ios ion-avatar[item-left], .item-ios ion-thumbnail[item-left] {
+        margin: 5px 10px 5px 5px;
+    } 
+    .item-ios ion-thumbnail img {
+        //max-width: 5.6rem;
+        max-height: 7rem;
+    }
+    @media only screen and (max-width: 450px) 
+    {
+        ion-item{ max-width: 100%; }
+    }     
+    @media only screen and (min-width : 451px) and (max-width : 800px)
+    {
+        ion-item{ max-width: 50%; }
+    }
+    @media only screen and (min-width : 801px)
+    {
+        ion-item{ max-width: 33%; }
+    }  
+
+
+    #divTrainerua{
+        /*margin-left:0px;
+        float: left;*/
+        //visibility: hidden;
+        background:url("../assets/images/imgTrainerua01.png");
+        background-position:center top;
+        background-repeat:no-repeat;
+        height: 730px;
+        margin-bottom: 15px;
+        //border: navy 1px solid;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+
+        span
+        {
+            white-space:nowrap;
+            overflow:hidden;
+            width:67px;
+            //height:12px;
+            display:inline-block;
+        }
+
+        @media only screen and (max-width: 240px) 
+        {
+            width: 320px;
+            background-size: 320px 725px;
+            .nomtrip, .apetrip, .propio { width:67px; font-size: 9px; }
+		}     
+        @media only screen and (min-width : 241px) and (max-width: 320px) 
+        {
+            width: 320px;
+            background-size: 320px 725px;
+            .nomtrip, .apetrip, .propio { width:67px; font-size: 10px !important; }
+		}     
+        @media only screen and (min-width : 321px) and (max-width : 375px)
+        {
+            width: 375px;
+            background-size:375px 725px;
+            .nomtrip, .apetrip, .propio { width:87px; font-size: 12px; }
+		}
+        @media only screen and (min-width : 376px) and (max-width : 480px)
+        {
+            width: 375px;
+            background-size:375px 725px;
+            .nomtrip, .apetrip, .propio { width:135px; font-size: 12px; }
+		}
+        @media only screen and (min-width : 481px)
+        {
+            width: 375px;
+            background-size:375px 725px;
+            .nomtrip, .apetrip, .propio { width:175px; font-size: 12px; }
+		}
+		.estribor, 
+        .proa, 
+        .patron {
+            .nomtrip, .apetrip { margin-left: 5px; }
+            .propio
+            {
+                position: absolute;
+                bottom: 0px;
+                margin-left:53px;
+            }        
+        }
+        img
+        {
+            float:left;
+            width: 44px;
+            //margin-right: 2px;
+            //border-left: solid 3px red;//$themeColor;
+        }
+        .babor
+        {
+            text-align: right;
+            .nomtrip, .apetrip { margin-right: 5px; }
+            .propio
+            {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                float:right;
+                margin-right: 53px;
+            }   
+            img
+            {
+                float:right;
+                margin-right: 0px;
+            }
+
+            right: calc(50% + 42px);
+        }
+        .estribor{
+            left: calc(50% + 40px);
+        }
+        .proa, 
+        .patron {
+            left: calc(50% - 70px);
+        }
+    }
+   
+    #tosta_1, #tosta_2, #tosta_3, #tosta_4, #tosta_5, #tosta_6, #tosta_7,
+    #tosta_8, #tosta_9, #tosta_10, #tosta_11, #tosta_12, #tosta_13, #tosta_14 
+    {
+        position:absolute; 
+        //background-color: lightgreen;
+        height: 60px;
+        width: 120px;
+        @media only screen and (min-width : 320px) and (max-width : 375px) 
+        {
+            width: 140px;
+        }
+        @media only screen and (min-width : 376px) and (max-width : 480px) 
+        {
+            width: 190px; 
+        }        
+        @media only screen and (min-width : 481px) 
+        {
+            width: 230px;
+        }
+    }   
+
+    #tosta_1{ top: 15px; }
+    #tosta_2, #tosta_3{ top: 85px; }
+    #tosta_4, #tosta_5{ top: 175px; }
+    #tosta_6, #tosta_7{ top: 265px; }
+    #tosta_8, #tosta_9{ top: 355px; }
+    #tosta_10, #tosta_11{ top: 445px; }
+    #tosta_12, #tosta_13{ top: 535px; }
+    #tosta_14{ top: 650px; }
+
+    #divArraunlariak{
+        .photo{
+            /*width: 80px;*/
+            height: 110px;
+        }
+    }
+}

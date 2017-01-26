@@ -1,0 +1,75 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="no-margin" id="titulopantalla">{{ 'Zuzenean' | translate }}</p><p class="no-margin" id="subtitulopantalla">{{ subtitle }}</p></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+<argazki-banner [datuak]="banner_datuak"></argazki-banner>
+		<div id="divZuzenean">
+            <div id="divDenborak">
+                <div id="divLuzea">{{oEstropada.luzea}}</div>
+                <div *ngFor="let trainerua of oEstropada.traineruak"
+                      [id]="'divDenbora'+ trainerua.ordena" 
+                      class="divDenbora"><label *ngIf="trainerua.label != ''"
+                                            class="postua">{{trainerua.ordena}}.</label><label *ngIf="trainerua.label != ''" [id]="'lblDenbora'+ trainerua.ordena" class="denbora">{{trainerua.label}}</label></div>
+                <!--<div id="divDenbora1" class="divDenbora"><label class="postua">1.</label><label id="lblDenbora1" class="denbora"></label></div>
+                <div id="divDenbora2" class="divDenbora"><label class="postua">2.</label><label id="lblDenbora2" class="denbora"></label></div>
+                <div id="divDenbora3" class="divDenbora"><label class="postua">3.</label><label id="lblDenbora3" class="denbora"></label></div>
+                <div id="divDenbora4" class="divDenbora"><label class="postua">4.</label><label id="lblDenbora4" class="denbora"></label></div>
+                <div id="divDenbora5" class="divDenbora"><label class="postua">5.</label><label id="lblDenbora5" class="denbora"></label></div>
+                <div id="divDenbora6" class="divDenbora"><label class="postua">6.</label><label id="lblDenbora6" class="denbora"></label></div>-->
+            </div>
+            <!--<div id="divKalea1" class="kalea"></div>
+            <div id="divKalea2" class="kalea"></div>
+            <div id="divKalea3" class="kalea"></div>
+            <div id="divKalea4" class="kalea"></div>
+            <div id="divKalea5" class="kalea"></div>
+            <div id="divKalea6" class="kalea"></div>
+            <div id="divKalea7" class="kalea"></div>-->
+            <div *ngFor="let trainerua of oEstropada.traineruak"
+                 [id]="'divKalea'+ trainerua.ordena" 
+                 [style.backgroundColor]="trainerua.kaleaBgcolor"       
+                 [style.width]="trainerua.kaleaWidth + 'px'"          
+                 [style.height]="trainerua.kaleaHeight + 'px'"
+                 [style.left]="trainerua.kaleaLeft + 'px'"
+                 [style.clip]="trainerua.kaleaClip"
+                 class="kalea"></div>
+            
+            <div *ngFor="let kalea of aKaleZenbakiakClone"
+              [id]="'zenbakiKalea'+ kalea.zenbakia" 
+              [style.width]="kalea.width + 'px'"          
+              [style.left]="kalea.left + 'px'"
+              class="zkiakalea">{{kalea.zenbakia}}</div>
+            
+            <!--<div id="zenbakiKalea1" class="zkiakalea">1</div>
+            <div id="zenbakiKalea2" class="zkiakalea">2</div>
+            <div id="zenbakiKalea3" class="zkiakalea">3</div>
+            <div id="zenbakiKalea4" class="zkiakalea">4</div>
+            <div id="zenbakiKalea5" class="zkiakalea">5</div>
+            <div id="zenbakiKalea6" class="zkiakalea">6</div>
+            <div id="zenbakiKalea7" class="zkiakalea">7</div>
+
+            <img id="imgTrainerua1" class="trainerua" src="" />
+            <img id="imgTrainerua2" class="trainerua" src="" />
+            <img id="imgTrainerua3" class="trainerua" src="" />
+            <img id="imgTrainerua4" class="trainerua" src="" />
+            <img id="imgTrainerua5" class="trainerua" src="" />
+            <img id="imgTrainerua6" class="trainerua" src="" />-->
+
+            <img *ngFor="let trainerua of oEstropada.traineruak"
+              [id]="'imgTrainerua'+trainerua.ordena" 
+              [src]="trainerua.imgSrc"
+              [style.top]="trainerua.imgTop + 'px'"          
+              [style.left]="trainerua.imgLeft + 'px'"
+              [style.visible]="trainerua.label != ''"
+              class="trainerua"  />
+		</div>
+		<div id="divHoraGPS">GPS: {{ oEstropada.ordua }}</div>
+		<div id="divDatosNO">{{ 'GPSOrdua' | translate }}</div>
+</ion-content>

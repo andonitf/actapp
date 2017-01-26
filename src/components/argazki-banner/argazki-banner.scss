@@ -1,0 +1,21 @@
+argazki-banner {
+    .anim-item {
+        //whitespace: no-wrap;
+        opacity: 1;
+        //display: none;
+        position: absolute;
+        
+        p {
+            margin: 0;
+        }
+    }
+    .little-padding {
+        padding: 3px 7px;
+    }
+    .white-bg {
+        background: url("../assets/images/transparent-white.png");
+    }
+    .gray-border {
+        border: 1px solid $grayColor;
+    }    
+}

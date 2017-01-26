@@ -1,0 +1,81 @@
+page-berriak {
+    ion-content{
+        ion-card:first-child{
+            margin-top: 0px;
+        }
+        ion-card{
+            margin:     15px 15px 15px 15px !important;
+            display:    inline-block;
+            border:     1px #000 solid;
+            height:     360px; 
+        }
+    }
+
+    img{
+        display:    block !important;
+        max-width:  310px;
+        height:     auto !important;
+        margin:     auto;
+    }
+
+    @media only screen and (max-width: 450px) 
+    {
+        ion-card{ max-width: 95%; }
+        .card-ios {
+            max-width: 95% !important;
+            width: calc(100% - 30px);
+        }
+    }     
+    @media only screen and (min-width : 451px) and (max-width : 800px)
+    {
+        ion-card{ max-width: 44%; }
+    }
+    @media only screen and (min-width : 801px)
+    {
+        ion-card{ max-width: 30%; }
+    }  
+
+
+    /* styles for '...' */ 
+    .block-with-text {
+        /* hide text if it more than N lines  */
+        overflow: hidden;
+        /* for set '...' in absolute position */
+        position: relative; 
+        /* use this value to count block height */
+        line-height: 1.2em;
+        /* max-height = line-height (1.2) * lines max number (4) -0.2 */
+        max-height: 4.6em; 
+        /* fix problem when last visible word doesn't adjoin right side  */
+        text-align: justify;  
+        /* place for '...' */
+        margin-right: -1em;
+        padding-right: 1em;
+    }
+    /* create the ... */
+    .block-with-text:before {
+        /* points in the end */
+        content: '...';
+        /* absolute position */
+        position: absolute;
+        /* set position to right bottom corner of block */
+        right: 0;
+        bottom: 0;
+    }
+    /* hide ... if we have text, which is less than or equal to max lines */
+    .block-with-text:after {
+        /* points in the end */
+        content: '';
+        /* absolute position */
+        position: absolute;
+        /* set position to right bottom corner of text */
+        right: 0;
+        /* set width and height */
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        /* bg color = bg color under block */
+        background: white;
+    }
+
+}

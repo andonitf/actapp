@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="no-margin" id="titulopantalla">{{ 'Emaitzak' | translate }}</p><p class="no-margin" id="subtitulopantalla">{{ subtitle }}</p></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content [ngClass]="'fondo_trainerua'">
+  
+  <argazki-banner [datuak]="banner_datuak"></argazki-banner>
+  <ion-list>
+    <ion-item *ngFor="let item of delent">
+      <ion-thumbnail item-left>
+        <img [src]="datuak.urldir + item.ar" *ngIf="item.iz != ''">
+      </ion-thumbnail>
+      <h2 [innerHTML]="item.po"></h2>
+      <p [innerHTML]="item.iz"></p>
+      <p [innerHTML]="item.ab"></p>
+    </ion-item>
+  </ion-list>
+  <div id="divTrainerua">
+    <div *ngFor="let item of arraunlariak" [id]="'tosta_' + item.po" [ngClass]="getTosta(item.po)">
+      <img [ngClass]="'phototri'" [src]="datuak.urlarr + item.ar"  />
+      <span [ngClass]="'nomtrip'" [innerHTML]="item.iz"></span><br />
+      <span [ngClass]="'apetrip'" [innerHTML]="item.ab"></span>
+      <div [ngClass]="'propio'" [innerHTML]="item.pr"></div>
+    </div>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let item of ordezkoak">
+      <ion-thumbnail item-left>
+        <img [src]="datuak.urlarr + item.ar">
+      </ion-thumbnail>
+      <h2 [innerHTML]="item.po"></h2>
+      <p [innerHTML]="item.iz"></p>
+      <p [innerHTML]="item.ab"></p>
+      <h2 [innerHTML]="item.pr"></h2>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,35 @@
+page-argazkiak {
+  ion-label{
+    width: auto;
+  }
+  // .photo{
+  //   position: relative;
+  //   overflow: hidden;
+  //   height: 60px;
+  //   width: 100%;
+  //   // &.cover{
+  //   //   height: 300px;
+  //   // }
+  // }
+  /*ion-col{
+    padding: 2px;
+  }*/
+  img{
+    display:block !important;
+    max-width:100% !important;
+    height:auto !important;
+  }
+  ion-grid{
+      padding: 0px !important;
+      ion-row{
+          background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+          ion-col{
+              font-size: 13px !important;
+              padding: 5px 2px 5px 2px !important;
+          }
+          /*ion-col:first-child{
+              padding-left: 10px;
+          }*/
+      }
+  }
+}

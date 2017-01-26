@@ -1,0 +1,97 @@
+page-zuzenean {
+    #divZuzenean
+    {
+        margin-left: calc(2%) !important;
+        margin-right: calc(2%) !important;
+        width: calc(96%) !important;
+        border: solid 1px navy;
+        margin: 10px auto;
+        background:url("../assets/images/imgItxasoa01.png");
+        background-repeat:repeat;
+        position:relative;
+        height: calc(100% - 250px);
+        min-height: 220px !important;
+    }  
+
+    .zkiakalea
+    {
+        top:30px;
+        font-size: 30px;
+        text-align:center;
+        z-index:10;
+        position:absolute;
+        //visibility:hidden;
+        text-shadow: 1px 0 #ffffff;
+        @media only screen and (min-width : 481px) { font-size: 40px; }    
+        @media only screen and (min-width : 701px) { font-size: 50px; }    
+    }
+
+    .trainerua { 
+        position:absolute; 
+        //visibility:hidden;
+        z-index:20;
+        
+    }
+    .trainerua:last-child{
+        visibility: hidden;
+    }
+    #divDenborak  
+    {
+        margin: 3px; 
+        height:15px; 
+        font-size: 8pt;
+        @media only screen and (min-width : 321px) 
+        {
+            font-size: 10pt;
+        }
+        div
+        {
+            float: left;
+        }
+        .divDenbora
+        {
+            background-color: Black;
+            color: White;
+            //visibility: hidden;
+        }
+        label
+        {
+            padding: 0px 2px 0px 2px;
+            margin-right: 2px;
+        }
+        .denbora {
+            //whitespace: no-wrap;
+            float:left;
+        }
+        .postua
+        {
+            background-color: White;
+            color: Black;
+            font-weight: bold;
+            float:left;
+        }
+    }
+    #divLuzea
+    {
+        background-color: #5fbdea;
+        margin-right:3px;
+        padding-right:2px;
+        //visibility: hidden;
+    }
+    .kalea
+    {
+        width:1px;
+        position: absolute;
+        float:left;
+        top: 40px; //provisional, lehen 0 zegoen eta itxasoa mugitzen da.
+        left: 40px; 
+        background:url("../assets/images/Zuzenean/imgFondoKalea.png");
+        background-repeat:repeat-y;
+        //clip: rect(30px, 1px, 1000px, 0px);
+        //height: calc(100% - 300px); // - 250px
+        label{
+            margin-top: 40px;
+            text-align:center;
+        }
+    }
+}

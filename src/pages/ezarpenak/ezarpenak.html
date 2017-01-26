@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ 'Ezarpenak' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <argazki-banner></argazki-banner>
+<ion-list radio-group (ionChange)="itemChanged('liga', $event)">
+  <ion-list-header>
+    {{ 'Liga' | translate }}
+  </ion-list-header>
+
+  <ion-item *ngFor="let item of ligak">
+    <ion-label>{{ item.label }}</ion-label>
+    <ion-radio checked="{{ item.value == liga }}" value="{{ item.value }}"></ion-radio>
+  </ion-item>
+
+</ion-list>
+
+<ion-list radio-group (ionChange)="itemChanged('hizkuntza', $event)">
+  <ion-list-header>
+    {{ 'Hizkuntza' | translate }}
+  </ion-list-header>
+
+  <ion-item *ngFor="let item of hizkuntzak">
+    <ion-label>{{ item.label }}</ion-label>
+    <ion-radio checked="{{ item.value == hizkuntza }}" value="{{ item.value }}"></ion-radio>
+  </ion-item>
+
+</ion-list>
+
+<ion-list radio-group (ionChange)="itemChanged('denboraldia', $event)">
+  <ion-list-header>
+    {{ 'Denboraldia' | translate }}
+  </ion-list-header>
+
+  <ion-item *ngFor="let item of denboraldiak">
+    <ion-label>{{ item }}</ion-label>
+    <ion-radio checked="{{ item == denboraldia }}" value="{{ item }}"></ion-radio>
+  </ion-item>
+
+</ion-list>
+
+</ion-content>

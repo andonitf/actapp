@@ -1,0 +1,134 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <argazki-banner></argazki-banner>
+  <!--
+<div class="padding-margin" id="divIconosHome">
+		<br>
+		<ul id="ulHome" class="column-split flexible-column">
+		    <li class="center" [navPush]="estropadakPage">
+          <img src="assets/images/home_2016/02_calendario.png" width="48">
+          <span id="icoEgutegia">{{ 'Egutegia' | translate }}</span>
+          <h3 id="spanEgutegia">{{ 'spanEgutegia' | translate }}</h3>
+		    </li>
+        <li class="center" [navPush]="taldeakPage">
+          <img src="assets/images/home_2016/03_equipos.png" width="48">
+          <span id="icoTaldeak">{{ 'Taldeak' | translate }}</span>
+          <h3 id="spanTaldeak">{{ 'spanTaldeak' | translate }}</h3>
+		    </li>
+        <li class="center" [navPush]="egutegiaPage">
+          <img src="assets/images/home_2016/11_emaitzak.png" width="48">
+          <span id="icoEmaitzak">{{ 'Emaitzak' | translate }}</span>
+          <h3 id="spanEmaitzak">{{ 'spanEmaitzak' | translate }}</h3>
+		    </li>
+        <li class="center" [navPush]="sailkapenaPage">
+          <img src="assets/images/home_2016/04_clasificacion.png" width="48">
+          <span id="icoSailkapena">{{ 'Sailkapena' | translate }}</span>
+          <h3 id="spanSailkapena">{{ 'spanSailkapena' | translate }}</h3>
+		    </li>
+        <li class="center">
+          <img src="assets/images/home_2016/12_zuzenean.png" width="48">
+          <span id="icoZuzenean">{{ 'Zuzenean' | translate }}</span>
+          <h3 id="spanZuzenean">{{ 'spanZuzenean' | translate }}</h3>
+		    </li>
+        <li class="center" [navPush]="argazkiakPage">
+          <img src="assets/images/home_2016/05_fotos.png" width="48">
+          <span id="icoArgazkiak">{{ 'Argazkiak' | translate }}</span>
+          <h3 id="spanArgazkiak">{{ 'spanArgazkiak' | translate }}</h3>
+		    </li>
+        <li class="center" [navPush]="berriakPage">
+          <img src="assets/images/home_2016/07_noticias.png" width="48">
+          <span id="icoBerriak">{{ 'Berriak' | translate }}</span>
+          <h3 id="spanBerriak">{{ 'spanBerriak' | translate }}</h3>
+		    </li>
+        <li class="center" [navPush]="ezarpenakPage">
+          <img src="assets/images/home_2016/09_idioma.png" width="48">
+          <span id="icoHizkuntza">{{ 'Ezarpenak' | translate }}</span>
+          <h3 id="spanHizkuntza">{{ 'spanHizkuntza' | translate }}</h3>
+		    </li>
+		</ul>
+  </div>-->
+  <div class="categories-list padding-margin">
+    <div class="col">
+      <a class="feed-category" [navPush]="estropadakPage">
+        <div>
+          <img class="category-image" src="assets/images/home/egutegia.png">
+        </div>
+        <div class="category-bg"></div>
+        <span class="category-title">{{ 'Egutegia' | translate }}</span>
+      </a>
+    </div>
+    <div class="col">
+      <a class="feed-category" [navPush]="taldeakPage">
+        <div>
+          <img class="category-image" src="assets/images/home/taldeak.png">
+        </div>
+        <div class="category-bg"></div>
+        <span class="category-title">{{ 'Taldeak' | translate }}</span>
+      </a>
+    </div>
+    <div class="col">
+      <a class="feed-category" [navPush]="egutegiaPage">
+        <div>
+          <img class="category-image" src="assets/images/home/emaitzak.png">
+        </div>
+        <div class="category-bg"></div>
+        <span class="category-title">{{ 'Emaitzak' | translate }}</span>
+      </a>
+    </div>
+    <div class="col">
+      <a class="feed-category" [navPush]="sailkapenaPage">
+        <div>
+          <img class="category-image" src="assets/images/home/sailkapena.png">
+        </div>
+        <div class="category-bg"></div>
+        <span class="category-title">{{ 'Sailkapena' | translate }}</span>
+      </a>
+    </div>
+    <div class="col">
+      <a class="feed-category" [navPush]="zuzeneanPage">
+        <div>
+          <img class="category-image" src="assets/images/home/zuzenean.png">
+        </div>
+        <div class="category-bg"></div>
+        <span class="category-title">{{ 'Zuzenean' | translate }}</span>
+      </a>
+    </div>
+    <div class="col">
+      <a class="feed-category" [navPush]="argazkiakPage">
+        <div>
+          <img class="category-image" src="assets/images/home/argazkiak.png">
+        </div>
+        <div class="category-bg"></div>
+        <span class="category-title">{{ 'Argazkiak' | translate }}</span>
+      </a>
+    </div>
+    <div class="col">
+      <a class="feed-category" [navPush]="berriakPage">
+        <div>
+          <img class="category-image" src="assets/images/home/berriak.png">
+        </div>
+        <div class="category-bg"></div>
+        <span class="category-title">{{ 'Berriak' | translate }}</span>
+      </a>
+    </div>
+    <div class="col">
+      <a class="feed-category" [navPush]="ezarpenakPage">
+        <div>
+          <img class="category-image" src="assets/images/home/ezarpenak.png">
+        </div>
+        <div class="category-bg"></div>
+        <span class="category-title">{{ 'Ezarpenak' | translate }}</span>
+      </a>
+    </div>
+  </div>
+</ion-content>

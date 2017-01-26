@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="no-margin" id="titulopantalla">{{title}}</p><p class="no-margin" id="subtitulopantalla">{{ subtitle }}</p></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="page-arraunlariak">
+  <argazki-banner></argazki-banner>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-thumbnail item-left>
+        <img [src]="item.ar">
+      </ion-thumbnail>
+      <h2 [innerHTML]="item.iz +' '+ item.ab"></h2>
+      <h3><ion-icon clear ios="ios-home-outline" md="md-home" *ngIf="item.he != ''"></ion-icon><span [innerHTML]="item.he"></span>&nbsp;</h3>
+      <h3><ion-icon clear ios="ios-calendar-outline" md="md-calendar" *ngIf="item.da != ''"></ion-icon><span [innerHTML]="item.da"></span>&nbsp;</h3>
+      <p>
+        <span [innerHTML]="item.mo"></span>
+        <span>. {{ item.ut }} {{ 'UrteKlubean' | translate }}</span>
+      </p>
+    </ion-item>
+  </ion-list>
+</ion-content>

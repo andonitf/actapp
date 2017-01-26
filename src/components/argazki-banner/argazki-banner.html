@@ -1,0 +1,6 @@
+<div [ngStyle]="{ 'background-image': 'url(' + image_url + ')'}" class="banner">
+  <div class="anim-item" style="left: 10px; top: 10px;" *ngIf="data1"><p class="little-padding white-bg gray-border">{{ data1 }}</p></div>
+  <div class="anim-item" style="left: 10px; top: 40px;" *ngIf="data2"><p class="little-padding white-bg gray-border">{{ data2 }}</p></div>
+  <div class="anim-item" style="right: 10px; top: 45px;" *ngIf="data3"><p class="little-padding white-bg gray-border">{{ data3 }}</p></div>
+  <div class="anim-item" style="right: 10px; top: 75px;" *ngIf="data4"><p class="little-padding white-bg gray-border">{{ data4 }}</p></div>
+</div>

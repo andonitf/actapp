@@ -1,0 +1,127 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+h2{
+    //font-size: 0.813em !important;
+    font-size: 13px !important;
+}
+h3{
+    //font-size: 0.813em !important;
+    font-size: 12px !important;
+}
+ion-title{
+    //padding-right: 20px !important;
+    padding:  0 20% !important;
+    //border: 2px red solid;
+    //margin: 0 20% !important;
+}
+.toolbar-title {
+    font-family: Aldrich;
+    text-transform: uppercase;
+    text-align: center;// left !important;
+    font-weight: 400;
+    //margin: 0 20% !important;
+    p {
+        font-family: "Aldrich";/*sans-serif;*/ 
+        font-size: 12px;
+        margin: 15px 0;
+    }
+    p:first-child {
+        font-size: 15px;
+    }
+    p.no-margin {
+        margin-top: 0;
+        margin-bottom: 7px;
+    }
+    p.no-margin:first-child {
+        margin-top: 7px;
+        margin-bottom: 0;
+    }
+    p.no-margin.margin-extra {
+        margin-top: 15px !important;
+        margin-bottom: 7px;
+        font-size: 17px;
+    }    
+}
+ion-app{
+    //max-width: 800px;
+}
+ion-grid{
+    padding: 0px !important;
+    ion-row{
+        background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+        ion-col{
+            font-size: 13px !important;
+            padding: 5px 2px 5px 2px;
+        }
+        ion-col:first-child{
+            padding-left: 10px;
+        }
+    }
+}
+ion-list {
+    .item:not(.menu-item) {
+        // font-size: 0.813em !important;
+        background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+        border-top: 0px !important;
+    }
+    .menu-item:first-child{
+        padding-top: 10px;
+    }
+    .menu-item:lastt-child{
+        border-bottom: solid #205081 1px;
+    }
+    .menu-item{
+        .item-inner{
+            border-bottom: 0px; // solid red;
+        }
+        .label {
+            margin: 6px 8px 7px 0;
+        }
+    }
+    .label {
+        margin: 10px 8px 10px 0;
+    }
+}
+ion-menu{
+    ion-icon{
+        //font-size: 1.4em;
+        width: 25px;
+        margin: 0px 15px 0px 3px;
+    }
+}
+
+div.banner{
+    width:  100%;
+    height: 120px;
+    //background: url('/assets/images/liga/Burua/LSM/15.jpg') 50% -2px / auto no-repeat;
+    background-repeat: no-repeat;
+    background-position: 50% -2px;
+}
+
+.alignleft {
+    float: left;
+    margin-top: 1px !important;
+}
+.alignright {
+    float: right;
+}
+.center {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}

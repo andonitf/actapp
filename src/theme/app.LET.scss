@@ -1,0 +1,134 @@
+.LET-theme {
+  //font-family: 'Helvetica Neue';
+  color: #0d4372;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: black; //$toolbar-title-color-lsm;
+  }
+  h2{
+    color: $list-border-color-dark-let;
+  }
+
+  ion-header {
+    border-bottom: 3px $toolbar-border-bottom-color-let solid;
+  }
+  .toolbar-title {
+              color: $toolbar-title-color-let;
+  }
+  .toolbar-background {
+    background-color: $toolbar-background-color-let;
+  }
+  .bar-button-menutoggle,
+  .bar-button-default:hover:not(.disable-hover)
+  .bar-button-default, .bar-button-default.bar-button-default, .bar-button-clear-default {
+      color: $toolbar-title-color-let !important;
+  }
+  span {
+    &.category-title{
+      display: block;
+      color: $list-border-color-dark-let !important;
+    }
+	}
+  ion-content {
+    background-color: $background-color-let;
+    &.fondo_trainerua{
+      background-color: #f6f6f6;
+    }
+  }
+
+  ion-menu{
+    ion-content div.fixed-content{
+      background-color: darken($toolbar-background-color-let, 1.5%);//#0d4372
+    }
+  }
+
+  ion-list {
+    border-bottom: solid #205081 1px;
+    .menu-item{
+      background-color: transparent;
+      border-top: solid #acd7fc 1px;
+      border-bottom: solid #205081 1px;
+      box-shadow: 0 1px 0 #acd7fc;
+      color: #fff;
+      font-size: 16px;
+      text-decoration: none;
+      display: block;
+      box-sizing: border-box;
+      text-shadow: 0px 1px 1px #000;
+      
+      .item-inner{
+            border-bottom: 0px; // solid red;
+      }
+    }
+    .menu-item:last-child{
+        border-bottom: solid #205081 1px;
+    }
+
+    .item:not(.menu-item):nth-child(odd) {
+        border-left: 5px solid $list-border-color-dark-let;
+    }
+    .item:not(.menu-item):nth-child(even) {
+        border-left: 5px solid $list-border-color-light-let;
+    }
+}
+
+  ion-grid{
+      ion-row:nth-child(odd):not(.grid_header) {
+          border-left: 5px solid $list-border-color-dark-let;
+      }
+      ion-row:nth-child(even):not(.grid_header) {
+          border-left: 5px solid $list-border-color-light-let;
+      }
+      ion-row {
+        &.grid_header {
+          border-left: 5px solid $toolbar-border-bottom-color-let;
+          border-bottom: 2px solid $toolbar-border-bottom-color-let;
+          font-family: Aldrich;
+          color: $list-border-color-dark-let;
+          text-decoration: underline;
+        }
+      }
+  }
+
+  ion-item{
+    &.grid_header {
+      min-height: 1rem;
+      .item-inner{
+        border-bottom: 0px solid;
+      }
+      border-left: 5px solid $toolbar-border-bottom-color-let;
+      border-bottom: 2px solid $toolbar-border-bottom-color-let;
+      background-color: white;
+      font-family: Aldrich;
+      color: $list-border-color-dark-let;
+      h2, h4{
+      text-decoration: underline !important;
+      }
+    }
+  }
+
+  .apetrip{ font-weight: bold; color: $list-border-color-dark-let; }
+  .propio{ padding-bottom:1px; border-bottom: solid 1px $list-border-color-dark-let; width:auto !important; }
+  #divTrainerua {
+    div:not(.propio){
+      border-left: solid 3px $list-border-color-dark-let;
+    }
+    div.babor{
+      border-left: solid 0px $list-border-color-dark-let;
+      border-right: solid 3px $list-border-color-dark-let;
+    }
+  }
+  
+  .anim-item{
+    p{
+      color: $list-border-color-dark-let;
+      font-size: 1.2rem;
+    }
+  }
+
+  #divHoraGPS, #divDatosNO{
+    margin-left:10px;
+    color: $list-border-color-dark-let;
+    font-size: 15px;
+  }
+}

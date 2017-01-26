@@ -1,0 +1,28 @@
+page-emaitzak {
+    h4:not(.alignright){
+        margin-top: 25px !important;
+        span:not(:last-child){
+            margin-right: 20px;
+        }
+    }
+    h2{
+        max-width: 75% !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    ion-item{
+        &.grid_header{
+            ion-label{
+                margin-top: 5px !important;
+                margin-bottom: 5px !important;
+            }
+            h2, h4{
+                font-size: 1.3rem;
+            }
+            &.alignright{
+                margin-top: -10px !important;
+            }
+        }
+    }
+}

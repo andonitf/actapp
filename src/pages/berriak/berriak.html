@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><p class="no-margin" id="titulopantalla">{{ 'Berriak' | translate }}</p><p class="no-margin" id="subtitulopantalla">{{ subtitle }}</p></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <argazki-banner></argazki-banner>
+	<ion-card *ngFor="let item of items" (click)="itemTapped($event, item)">
+
+		<ion-item>
+					<h2 [innerHTML]="item.da"></h2>
+					<p [innerHTML]="item.iz"></p>
+		</ion-item>
+
+		<img src="{{ url + item.arg_t }}" />
+
+		<ion-card-content>
+			<p [innerHTML]="item.has" class="block-with-text"></p>
+		</ion-card-content>
+
+	</ion-card>
+
+ <ion-infinite-scroll *ngIf="datu_gehiago_dago" (ionInfinite)="doInfinite($event)">
+   <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="{{ 'DatuGehiago' | translate }}"></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+
+</ion-content>
